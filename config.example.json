@@ -1,0 +1,77 @@
+{
+  "$schema": "https://openclaw.ai/schema/config.json",
+  "_comment": "OpenClaw Enhanced Configuration Template - Replace all YOUR_* values with your actual credentials",
+  
+  "agents": {
+    "defaults": {
+      "memorySearch": {
+        "enabled": true,
+        "query": {
+          "hybrid": {
+            "enabled": true,
+            "vectorWeight": 0.7,
+            "textWeight": 0.3,
+            "candidateMultiplier": 4
+          }
+        }
+      }
+    }
+  },
+  
+  "gateway": {
+    "bind": "loopback",
+    "auth": {
+      "token": "YOUR_SECURE_GATEWAY_TOKEN_GENERATE_WITH_openssl_rand_base64_24"
+    }
+  },
+  
+  "channels": {
+    "telegram": {
+      "token": "YOUR_TELEGRAM_BOT_TOKEN_FROM_BOTFATHER",
+      "network": {
+        "autoSelectFamily": false
+      }
+    }
+  },
+  
+  "models": {
+    "providers": {
+      "openai": {
+        "_comment": "Example: OpenAI API",
+        "baseUrl": "https://api.openai.com/v1",
+        "apiKey": "YOUR_OPENAI_API_KEY",
+        "models": [
+          {
+            "id": "gpt-4o",
+            "name": "GPT-4o"
+          }
+        ]
+      },
+      "anthropic": {
+        "_comment": "Example: Anthropic Claude API",
+        "baseUrl": "https://api.anthropic.com/v1",
+        "apiKey": "YOUR_ANTHROPIC_API_KEY",
+        "models": [
+          {
+            "id": "claude-sonnet-4-20250514",
+            "name": "Claude Sonnet 4"
+          }
+        ]
+      },
+      "custom": {
+        "_comment": "Example: Custom OpenAI-compatible API (like a4f.co, together.ai, etc.)",
+        "baseUrl": "https://api.your-provider.com/v1",
+        "apiKey": "YOUR_CUSTOM_API_KEY",
+        "models": [
+          {
+            "id": "your-model-id",
+            "name": "Your Model Name",
+            "compat": {
+              "supportsDeveloperRole": false
+            }
+          }
+        ]
+      }
+    }
+  }
+}
