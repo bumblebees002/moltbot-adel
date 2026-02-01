@@ -16,16 +16,12 @@
   <img alt="Telegram" src="https://img.shields.io/badge/Telegram-stable-1d9bf0?style=for-the-badge&logo=telegram&logoColor=white" />
 </p>
 
-<p align="center">
-  <strong>✅ No secrets committed.</strong> Uses placeholders for API keys, base URLs, and tokens.
-</p>
-
 ---
 
 ## ⚡ Highlights
 
 - ✅ <strong>Telegram works reliably on Node.js 22+</strong> (fixes IPv6/DNS timeout issues)
-- ✅ <strong>Config template included</strong> (safe placeholders only)
+- ✅ <strong>Config template included</strong>
 - ✅ <strong>Vector memory enabled in template</strong> (hybrid search tuned)
 - ✅ <strong>Security hardening guidance</strong> (permissions, localhost bind, strong tokens)
 - ✅ <strong>Clone on any server</strong> and get the same behavior — just add your own credentials
@@ -85,15 +81,10 @@ If you clone this repo on a new server, you get:
 dns.setDefaultResultOrder("ipv4first");
 ```
 
-### 2) Safe config template (no secrets)
+### 2) Safe config template
 
 Copy this file and edit your own values:
 - `config.example.json`
-
-This repo intentionally does <strong>not</strong> include real:
-- API keys
-- base URLs
-- tokens
 
 ### 3) Vector memory enabled in the template
 
@@ -197,8 +188,6 @@ Do **not** commit:
 - LLM base URLs (if private)
 - Telegram bot token
 - gateway token
-
-This repo keeps templates safe and uses placeholders.
 
 ### Recommended gateway config
 
